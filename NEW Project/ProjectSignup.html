@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        
+        <title>Document</title>
+        </head>
+        <style>
+           #nav{
+                margin-left: 100px;
+                color: red;
+                }
+
+           #div{
+               display: flex;
+           }#container{
+                width:500px;
+                height: 500px;
+                background-color: black;
+                margin: auto;
+              
+            }
+            
+        </style>
+        <body>
+            <div id="container">
+            <div id="nav">
+               
+                
+            <h1 style="color:lawngreen;padding-top: 30px;"> SIGN IN </h1>
+            <form>
+             
+              
+                <h4>Email</h4>
+                <input  class="email" type="text" placeholder="Enter email address"/><br>
+                 
+                <h4>password</h4>
+                <input id="pass" type="password" placeholder="Enter password"/><br>
+                
+                <h4>Name</h4>
+                <input id="user" type="text" placeholder="Enter username"/><br>
+               
+                <h4>Mobile</h4>
+                <input id="mbl" type="text" placeholder="Enter mobile number"/><br>
+                 
+                
+                <input style="margin-top: 20px;color:red"; id ="submit" type="submit" value="Sign In"/>
+               
+                <div>
+                    <p>Already have a Sign In?
+                    <a href="project.html">
+                    </p>
+                </div>
+                
+
+
+            </form>
+        </div>
+     </div>
+
+        </body>
+</html>
+
+
+        <script>
+
+            document.querySelector("form").addEventListener("submit",formSubmit)
+            userStack = JSON.parse(localStorage.getItem("userDataBase"));
+            function formSubmit(event){
+           event.preventDefault();
+           var email = document.querySelector(".email").value;
+           var pass  = document.querySelector("#pass").value;
+           var user = document.querySelector("#user").value;
+           var mbl = document.querySelector("#mbl").value;
+             
+          var userData = {
+              emailAdd :email,
+              passwd:pass,
+              userName:user,
+              mblNum:mbl,
+          };
+
+           userStack.push(userData);
+         //  console.log(userStack)
+        //    console.log(userData);
+        
+          localStorage.setItem("userDataBase",JSON.stringify(userStack));
+          
+          alert("signup success");
+          window.location.href="Login.html"
+        }
+        </script>

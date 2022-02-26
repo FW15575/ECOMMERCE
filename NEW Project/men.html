@@ -1,0 +1,253 @@
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        </head>
+        <style>
+
+            #container{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap:20px;
+                background-color: aliceblue;
+                border: 2px solid  green;
+            }
+             #flex{
+                display: flex;
+                justify-content: space-around;
+                border: 1px solid red;
+            }
+     </style>
+        <body>
+            <h1>Men Page</h1>
+            <button onclick="window.location.href='cart.html'">Go to Cart</button>
+            
+            <div id="container"></div>
+   </body>
+</html>
+<script>
+    var mensData=[  
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/ENHLSH01-Regimen-Explainer-R-F-Lash-Boost-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxMDc0OHxpbWFnZS9wbmd8aW1hZ2VzL2hmMS9oYWMvMTQ1MzIwNDI1ODgxOTAucG5nfDQyNTQ0OGUzYmMwZTJkM2YzNzE1MjE2NzQ1M2YxMWQ5M2E3ZWQ2MjAwMDA3MzFmNjQyOWUwNDU3OWZmMTkzZDY",
+    name:"R + F Lash Boost",
+    price:"$150",
+    //strikedoffprice:"$2599",
+    },
+
+    {
+        image_url:
+       "https://www.rodanandfields.com/en-us/medias/TRFS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyODM2M3xpbWFnZS9wbmd8aW1hZ2VzL2g5Yy9oNzcvMTM3NTgzODUzODk1OTgucG5nfGYyZGUwNzdmOWM3N2Q2M2FlMjM4Zjc4MjQxNWZkNmIzOTc0NjIyZWM3MDgyZTY3YzA5YjMyZjNhZWY3MGE3YzY",
+
+       name:"Total RF Serum",
+    price:"175",
+    //strikedoffprice:"2499",
+    },
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/MFEC-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyMzc3NHxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oZmMvMTM3NTgzODU0NTUxMzQucG5nfDNmYWYyNzdiZGY5OWIyY2UzMDYyZDliYmM2YmUzMTRmOGY3Yzg0YmY1ZjY2YjgyYWU1OGNhZDZiN2IzMjViZGI",
+    name:"REDEFINE Multi-Function Eye Cream",
+    price: 70,
+   // strikedoffprice:"2399",
+    },
+
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/DERDLB1-cat.jpg?context=bWFzdGVyfGltYWdlc3wxMDkyNHxpbWFnZS9qcGVnfGltYWdlcy9oNGEvaDE4Lzg4MjE4NDQxNDgyNTQuanBnfDVmY2E4ZmM1YzdlNjQxMmI4YjgzNGY4MDIwNWVlZDc2MmNhYzVjN2FjZmQyMTFiNmU1NDc4Y2RiNGQyOWFmZjk",
+    name:"RADIANT DEFENSE LIQUID BRUSH",
+    price: 60,
+    //strikedoffprice:"2299"
+    },
+
+    {
+        image_url:
+        "https://www.rodanandfields.com/en-us/medias/ESMRB01-720x600-Desktop-1-.jpg?context=bWFzdGVyfGltYWdlc3w0MTM2OHxpbWFnZS9qcGVnfGltYWdlcy9oZWYvaDMxLzE0MDMyNzUyNTc0NDk0LmpwZ3w5OTBlOTQ0ZDA5MjhhMzJiZDc3NWI4MGQ4Zjc3ZGVmYmJmM2M0YmU5MDkxNTc5NmMzOTJiNjBiMzEwZDZhOTc1",
+
+    name:"ESSENTIALS COMPLETE EYE MAKEUP REMOVER",
+    price: 32,
+    //strikedoffprice:"2199"
+    },
+
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/ESBL200-cat.jpg?context=bWFzdGVyfGltYWdlc3wyMjg3NHxpbWFnZS9qcGVnfGltYWdlcy9oZTYvaDJhLzg4MjE4NDQ4NjkxNTAuanBnfGQ2M2NlOTA4ZWU1ODZjZjkyNDQwZTNhN2VhM2FjM2E1MmZjMjI3YWEyMjkzYmRmZDQ5ZGM2OGJlMWI4MjJjYTA",
+    name:"ESSENTIALS Daily Body Moisturizer",
+    price: 27,
+    //strikedoffprice:"2099"
+    },
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/ESLS002-cat.jpg?context=bWFzdGVyfGltYWdlc3wzNjk5NHxpbWFnZS9qcGVnfGltYWdlcy9oMzUvaDRlLzg4MjE4NDQ5Njc0NTQuanBnfGQ5M2Q2OWZjNDEzM2Q4MTMwYTc5N2M3MThhYzdiODVjYTMzZjY2N2Y3MWVjYTNlZWNmNmRlMmEzMGNmNDlhY2Q",
+
+    name:"ESSENTIALS Lip Shield SPF 25 (Two-Pack",
+    price: 10,
+    //strikedoffprice:"2699"
+    },
+
+    {
+      image_url:
+    "https://www.rodanandfields.com/en-us/medias/XTPCS01-Regimen-Explainer-Pore-Cleansing-MD-System-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyNTc5NXxpbWFnZS9wbmd8aW1hZ2VzL2gyOC9oMjkvMTQ2MDQwOTU3ODI5NDIucG5nfGYxY2EwZWMyODQxNTM0MTE5ODRmOTlkZjZmYTY5MzE2MDZjNjE5NmZmMjE4M2U1NTNmODE3ZDJhMWI3ZTM1Y2E",
+    name:"Pore Cleansing MD System",
+    price: 260,
+    //strikedoffprice:"2790",
+    },
+
+
+    {
+      image_url:
+      "https://www.rodanandfields.com/en-us/medias/AARMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTUyMTd8aW1hZ2UvanBlZ3xoYTUvaDliLzEzNjE1MDM2MTcwMjcwLmpwZ3xhM2U4ZGUyYzhhOGNhOTBiM2I0NjE4YjU1MTM5MjUwMGVhOTJhZjdlNzcwOTU2NmEwMDEwZjNmNmEyNDc1OGUz",
+    name:"REDEFINE Rejuvenation Mask",
+    price: 60,
+    //strikedoffprice:"2790",
+    },
+
+    {
+      image_url:
+      "https://www.rodanandfields.com/en-us/medias/RVRMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTQ4NzJ8aW1hZ2UvanBlZ3xoYTkvaDRiLzEzNjE2MDEzMjQ2NDk0LmpwZ3w0NGQyYWM2NjM3OGIwNDdmZWYzOGJlZjBjNGMyMjk1MmNhNDY3N2Q1ZDhlZTE5NDlhNDA1ZmM3YTFiNzc5MDli",
+    name:"REVERSE Radiance Mask",
+    price: 60,
+    //strikedoffprice:"2790",
+    },
+
+    {
+      image_url:
+      "https://www.rodanandfields.com/en-us/medias/UNRMF50-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w0MTg2NnxpbWFnZS9qcGVnfGltYWdlcy9oN2MvaDk2LzEzNjE1ODgxMzg4MDYyLmpwZ3w0ZGE1ZWNiZWI1OTdiYmFkMjY3ZWU3ZWVmMDBkZjdlOWYzMDY4MGUwYWE4NTZiZTZjN2M3YjUxN2M2NmYxYjhk",
+    name:"UNBLEMISH Clarifying Mask",
+    price: 60,
+    //strikedoffprice:"2790",
+    },
+
+    {
+      image_url:
+      "https://www.rodanandfields.com/en-us/medias/SORMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTg4MzN8aW1hZ2UvanBlZ3xoOTEvaDUzLzEzNjE1ODc4Mjc1MTAyLmpwZ3wwY2QzZDVmYTIzNDhlYjY1YjMzYWRjN2RkMzJmNzVlNGQxZWM1MTBhZjA1YjgwMzhkMWI4ZTNhMjM5ODRhMmJi",
+    name:"SOOTHE Rescue Mask",
+    price: 60,
+    //strikedoffprice:"2790",
+    },
+
+    {
+      image_url:
+      "https://www.rodanandfields.com/en-us/medias/RCDMF50-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxNDYyN3xpbWFnZS9qcGVnfGltYWdlcy9oMjYvaDYzLzEzNjE1ODcyMjEzMDIyLmpwZ3xmYWJlZGQ0ZDc0ZmUwYzUwNWM3ODMyZGUyZDlkZjA1NjBmZDMxZmU0ZDlmZjdkNDQwZDhkNWVmOGQ4YjlmYTQ3",
+    name:"RECHARGE Detox Mask",
+    price :60,
+    //strikedoffprice:"2790",
+    }, 
+ ]
+
+ //   var  mensData=JSON.parse(localStorage.getItem("mensData"));
+ mensData.map(function(data){
+
+    
+   
+    var div = document.createElement("div");
+     
+    ////image creation  
+    var image=document.createElement("img");
+    image.setAttribute("src",data.image_url);
+
+
+    ///name creation
+    var name=document.createElement("p");
+    name.textContent=data.name;
+
+    
+     //// price creation
+    var div2=document.createElement("div2");
+    div2.setAttribute("id","flex");
+     
+    var p1=document.createElement("p");
+    p1.textContent=data.price;
+
+    var p2=document.createElement("p");
+    p2.textContent=data.strikedoffprice;
+
+    div2.append(p1,p2);
+
+    var btn=document.createElement("button");
+    btn.textContent="Add To Cart";
+
+    btn.addEventListener("click",function(){
+        addToCart(data);
+    });
+
+
+
+   
+    div.append(image,name,div2,btn);
+
+    document.querySelector("#container").append(div);
+ });
+
+ var cartArr=JSON.parse(localStorage.getItem("cartItem"))||[]
+ // this is line very important for locat storage;
+var cartArr=[]
+
+//  ...this line is ver important statement
+
+function addToCart(data){
+    console.log(data,"data");
+    cartArr.push(data);
+    localStorage.setItem("cartItem",JSON.stringify(cartArr));
+    alert("added succesfully");
+}
+
+
+</script>
+
+
+     //////
+
+    // var cart=document.createElement("button")
+    // cart.innerText="Add To Cart";
+ 
+    // cart.addEventListener("click",function(){
+    //     addTocart(elem)
+    // })
+
+//   var cartArr=[]
+
+
+//     function addTocart(elem){
+//         console.log(elem,"elem");
+
+
+//         cartArr.push(elem)
+//     }
+
+    
+
+
+    // mainDiv.append(img,name,innerDiv,cart);
+
+
+    // document.querySelector("#container").append(div);
+    // });
+
+
+
+
+
+
+
+
+
+
+
+// var innerDiv=document.createElement("div");
+
+// var price=document.createElement("p");
+// price.innerText=data.price;
+
+// var strikedoffprice=document.createElement("p");
+// strikedoffprice.innerText=data.strikedoffprice;
+
+// innerDiv.append(price,strikedoffprice);
+// innerDiv.setAttribute("class","priceDiv");

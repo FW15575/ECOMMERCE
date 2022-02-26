@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        <style>
+             #nav{
+                width: 1200px;
+                height: 50px;
+                background-color: rgb(28,41,56);
+               
+                color: white;
+                justify-content:space-between ;
+                display: flex;
+                padding: 25px 0 0 20px;
+                border: 1px solid red;
+            }
+            #left{
+                width: 70%;
+                -border: 1px solid red;
+            }
+            
+            #right{
+                display: flex;
+                justify-content: space-between;
+                width: 30%;
+                border: 1px solid green; 
+                 }
+                 #a{
+                     text-decoration: none;
+                     color: white;
+                 }
+        </style>
+    </head>
+
+    <body>
+        <div id="nav">
+            <div id="left">Reebok</div>
+            <div id="right">
+                
+              <div>
+                  <a  target="_blank" ; href="about.html">About</a>
+                </div>
+             <div onclick="window.location.href='Men.html'">Men</div>  
+              <div onclick="window.location.href='Women.html'">Women</div>
+              <div onclick="window.location.href='Login.html'">Login</div>
+              <div onclick="window.location.href='Signup.html'">Signup</div> 
+ 
+
+              <!-- <div id="men">Men</div>
+              <div id ="women">Women</div>
+              <div id ="lg">Login</div>
+              <div id="sp">Signup</div> -->
+          </div>
+        </div>  
+    </body>
+</html>
+
+<script>
+ localStorage.setItem("name","Masai School");
+
+
+//  document.getElementById("men").addEventListener("click",function(){
+
+//      window.location.href="men.html"
+//  });
+
+//  document.getElementById("women").addEventListener("click",function(){
+//      window.location.href="women.html"
+//  });
+
+
+//     document.getElementById("lg").addEventListener("click",function(){
+//         window.location.href="login.html"
+//     });
+
+
+//     document.getElementById("sp").addEventListener("click",function(){
+//         window.location.href="signup.html"
+//     });
+
+ 
+</script>

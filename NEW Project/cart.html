@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie-edge"/>
+        <title>Document</title>
+        </head>
+        <style>
+
+            #container{
+              display: grid;
+              grid-template-columns: repeat(2,1fr);
+            
+              gap:10px;
+                               
+          }
+          #flex {
+              display: flex;
+              justify-content: space-around;
+             }
+             #flex>p:nth-child(2){
+                 text-decoration: line-through;
+             }
+             
+             
+          </style>
+        <body>
+
+            <h1>Total Amount</h1>
+            <button onclick="window.location.href='checkout.html'">Check Out</button>
+            <div id="container">  </div>
+           
+        </body>
+</html>
+<script>
+
+var cartArr=JSON.parse(localStorage.getItem("cartItem"))
+
+console.log(cartArr)
+
+cartArr.map(function(data){
+
+var div = document.createElement("div");
+     
+    ////image creation  
+    var image=document.createElement("img");
+    image.setAttribute("src",data.image_url);
+
+
+    ///name creation
+    var name=document.createElement("p");
+    name.textContent=data.name;
+
+    
+     //// price creation
+    var div2=document.createElement("div2");
+    div2.setAttribute("id","flex");
+     
+    var p1=document.createElement("p");
+    p1.textContent=data.price;
+
+    var p2=document.createElement("p");
+    p2.textContent=data.strikedoffprice;
+
+    div2.append(p1,p2);
+
+    // var btn=document.createElement("button");
+    // btn.textContent="Add To Cart";
+
+    // btn.addEventListener("click",function(){
+    //     addToCart(data);
+    // });
+
+     div.append(image,name,div2);
+
+    document.querySelector("#container").append(div);
+ });
+
+ var total=cartArr.reduce(function(acc,cv){
+     return acc + Number(cv.price);
+ },0)
+
+ console.log(total);
+ document.querySelector("h1").textContent= total
+
+  console.log(total)
+
+
+
+</script>

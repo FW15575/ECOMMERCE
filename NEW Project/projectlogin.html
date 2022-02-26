@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        </head>
+        <style>
+
+          
+
+            #container{
+                width: 300px;
+                height: 300px;
+                background-color: lavenderblush;
+                margin: auto;
+                margin-top: 40px;;
+                }
+                #nav{
+                margin-left: 80px;
+                color: red;
+                }
+
+             
+        </style>
+        <body>
+          
+            <div id="container">
+                <div id="nav">
+                
+            <h1 style="margin-top: 80px;">Login Page</h1>
+            
+            <form>
+                  <h4>Name</h4>
+                <input  id="user" type="text" placeholder="Enter username"/><br>
+                  
+
+                   <h4>Password</h4>
+                    <input  id="pass" type="password" placeholder="Enter password"/><br>
+                   
+                
+                   
+                   <input style="margin-top: 20px;color: black"; type="submit" value = "login"/>
+                
+                   <p></p>
+               
+                </form>
+       
+    </div>
+</div>
+        </body>
+        </html>
+
+        <script>
+            document.querySelector("form").addEventListener("submit",signin)
+
+            var regdUsers=JSON.parse(localStorage.getItem("userDataBase"));
+
+            function signin(event){
+                event.preventDefault();
+
+                var pass  = document.querySelector("#pass").value;
+                var user = document.querySelector("#user").value;
+
+                for(var i =0;i< regdUsers.length;i++){
+                    console.log(regdUsers[i].userName,regdUsers[i].passwd);
+                   if(regdUsers[i].userName == user &&
+                   regdUsers[i].passwd == pass )
+                   {
+                       window.location.href = "project.html";
+                   }
+                   else{
+                       alert("Invalid details");
+                    }
+               
+                }
+            }
+        </script>

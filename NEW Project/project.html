@@ -1,0 +1,627 @@
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        <style>
+             #nav{
+                width: 1300px;
+                height: 70px;
+                background-color: whitesmoke;
+               
+                color:black;
+                justify-content:space-between ;
+                display: flex;
+                padding: 25px 0 0 20px;
+                border: 1px solid red;
+            }
+            #left{
+                width: 60%;
+                -border: 1px solid red;
+                display: flex;
+                justify-content:space-around ;
+                color: black;
+            }
+            
+           #right{
+                display: flex;
+                justify-content: space-between;
+                width: 40%;
+                border: 1px solid green; 
+                color: black;
+                 }
+                
+                 
+          #nav2{
+                width: 1300px;
+                height: 70px;
+                background-color:whitesmoke;
+                color:black;
+                justify-content:space-around ;
+                display: flex;
+                padding: 25px 0 0 20px;
+                border: 1px solid red;
+            }
+                
+        </style>
+    </head>
+
+    <body>
+        <div id="nav">
+           
+            <div id="left">
+                <div>
+                    <a  target="_blank" ; href="about.html">FIND A CONSULTANT</a>
+                  </div>
+
+                 <h1>RODAN+FEILDS</h1>   
+            </div>
+
+        
+            <div id="right">
+                
+              <!-- <div>
+                  <a  target="_blank" ; href="about.html">FIND A CONSULTANT</a>
+                </div> -->
+             <!-- <div onclick="window.location.href='Men.html'">Men</div>  
+              <div onclick="window.location.href='Women.html'">Women</div> -->
+              <!-- <input type="search" placeholder="search"> -->
+              
+              <input style="height:30%"; id="search" type="text" placeholder="Search"/>
+              <div onclick="window.location.href='Login.html'">Login</div>
+              <div onclick="window.location.href='ProjectSignup.html'">Signup</div> 
+              <button style="height:40%"; onclick="window.location.href='cart.html'">Go to Cart</button>
+      
+            </div>
+        </div>  
+        
+
+        <div id="nav2">
+        
+            <div onclick="window.location.href='Men.html'">Shop</div>  
+            <div onclick="window.location.href='Women.html'">Best Sellers</div>
+            <div onclick="window.location.href='Men.html'">FEATURED</div>
+            <div onclick="window.location.href='Men.html'">OUR STORY</div>
+            <div onclick="window.location.href='Men.html'">PERKS PROGRAM</div>
+            <div onclick="window.location.href='Men.html'">BECOME CONSULTANT</div>
+            <div onclick="window.location.href='Men.html'">BLOG</div>
+
+
+
+        </div>
+
+     </body> 
+</html> 
+
+
+ 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        </head>
+        	<style>
+        
+
+            #container{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap:20px;
+                background-color:whitesmoke;
+            }
+             #flex{
+                display: flex;
+                justify-content: space-around;
+            }
+     </style>
+        <body>
+           <!-- // <h1>Men Page</h1> -->
+            <button onclick="window.location.href='cart.html'">Go to Cart</button>
+            
+            <div id="container">
+                <div>
+                <h1 style="text-align: center;">BEST SELLERS</h1>
+                <p style="text-align: center;font-size: large;margin-left: 50px;">Shop our fan favorites. We’ve got a full range of skincare products including cleansers, creams, serums + more. All created with dermatology-inspired formulas to address your skin concerns. Experience the transformative results + get the best skin of your life.</p>
+            </div>
+            </div>  
+   </body>
+ </html>
+<script>
+    var mensData=[  
+        {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/ENHLSH01-Regimen-Explainer-R-F-Lash-Boost-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxMDc0OHxpbWFnZS9wbmd8aW1hZ2VzL2hmMS9oYWMvMTQ1MzIwNDI1ODgxOTAucG5nfDQyNTQ0OGUzYmMwZTJkM2YzNzE1MjE2NzQ1M2YxMWQ5M2E3ZWQ2MjAwMDA3MzFmNjQyOWUwNDU3OWZmMTkzZDY",
+    name:"R + F Lash Boost",
+    price: 150,
+    //strikedoffprice:"2599",
+    },
+
+    {
+        image_url:
+       "https://www.rodanandfields.com/en-us/medias/TRFS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyODM2M3xpbWFnZS9wbmd8aW1hZ2VzL2g5Yy9oNzcvMTM3NTgzODUzODk1OTgucG5nfGYyZGUwNzdmOWM3N2Q2M2FlMjM4Zjc4MjQxNWZkNmIzOTc0NjIyZWM3MDgyZTY3YzA5YjMyZjNhZWY3MGE3YzY",
+
+       name:"Total RF Serum",
+    price: 175,
+    //strikedoffprice:"2499",
+    },
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/MFEC-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyMzc3NHxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oZmMvMTM3NTgzODU0NTUxMzQucG5nfDNmYWYyNzdiZGY5OWIyY2UzMDYyZDliYmM2YmUzMTRmOGY3Yzg0YmY1ZjY2YjgyYWU1OGNhZDZiN2IzMjViZGI",
+    name:"REDEFINE Multi-Function Eye Cream",
+    price: 70,
+   // strikedoffprice:"2399",
+    },
+
+   
+
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/DERDLB1-cat.jpg?context=bWFzdGVyfGltYWdlc3wxMDkyNHxpbWFnZS9qcGVnfGltYWdlcy9oNGEvaDE4Lzg4MjE4NDQxNDgyNTQuanBnfDVmY2E4ZmM1YzdlNjQxMmI4YjgzNGY4MDIwNWVlZDc2MmNhYzVjN2FjZmQyMTFiNmU1NDc4Y2RiNGQyOWFmZjk",
+    name:"RADIANT DEFENSE LIQUID BRUSH",
+    price: 60,
+    //strikedoffprice:"2299"
+    },
+
+    {
+        image_url:
+        "https://www.rodanandfields.com/en-us/medias/ESMRB01-720x600-Desktop-1-.jpg?context=bWFzdGVyfGltYWdlc3w0MTM2OHxpbWFnZS9qcGVnfGltYWdlcy9oZWYvaDMxLzE0MDMyNzUyNTc0NDk0LmpwZ3w5OTBlOTQ0ZDA5MjhhMzJiZDc3NWI4MGQ4Zjc3ZGVmYmJmM2M0YmU5MDkxNTc5NmMzOTJiNjBiMzEwZDZhOTc1",
+
+    name:"ESSENTIALS COMPLETE EYE MAKEUP REMOVER",
+    price:32,
+    //strikedoffprice:"2199"
+    },
+
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/ESBL200-cat.jpg?context=bWFzdGVyfGltYWdlc3wyMjg3NHxpbWFnZS9qcGVnfGltYWdlcy9oZTYvaDJhLzg4MjE4NDQ4NjkxNTAuanBnfGQ2M2NlOTA4ZWU1ODZjZjkyNDQwZTNhN2VhM2FjM2E1MmZjMjI3YWEyMjkzYmRmZDQ5ZGM2OGJlMWI4MjJjYTA",
+    name:"ESSENTIALS Daily Body Moisturizer",
+    price:27,
+    //strikedoffprice:"2099"
+    },
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/ESLS002-cat.jpg?context=bWFzdGVyfGltYWdlc3wzNjk5NHxpbWFnZS9qcGVnfGltYWdlcy9oMzUvaDRlLzg4MjE4NDQ5Njc0NTQuanBnfGQ5M2Q2OWZjNDEzM2Q4MTMwYTc5N2M3MThhYzdiODVjYTMzZjY2N2Y3MWVjYTNlZWNmNmRlMmEzMGNmNDlhY2Q",
+
+    name:"ESSENTIALS Lip Shield SPF 25 (Two-Pack)",
+    price:10,
+    //strikedoffprice:"2699"
+    },
+
+    {
+      image_url:
+    "https://www.rodanandfields.com/en-us/medias/XTPCS01-Regimen-Explainer-Pore-Cleansing-MD-System-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyNTc5NXxpbWFnZS9wbmd8aW1hZ2VzL2gyOC9oMjkvMTQ2MDQwOTU3ODI5NDIucG5nfGYxY2EwZWMyODQxNTM0MTE5ODRmOTlkZjZmYTY5MzE2MDZjNjE5NmZmMjE4M2U1NTNmODE3ZDJhMWI3ZTM1Y2E",
+    name:"Pore Cleansing MD System",
+    price: 26,
+    //strikedoffprice:"2790",
+     },
+
+     
+
+
+     {
+      image_url:
+    "bWFzdGVyfGltYWdlc3wxOTg1OTR8aW1hZ2UvanBlZ3xpbWFnZXMvaGYxL2g1Mi8xMTg1NDA1NTI3NjU3NC5qcGd8NDQ5MmQ3MGJmNzYyY2U4ZGQzNWRmYjJhZWM1ZGMwY2FlMGRiMGY3NmNhMjBjOGI1OTYwNzdiNDY2MmViMTVhZA",
+    name:"REDEFINE Daily Clay Cleanser",
+    price: 45,
+    //strikedoffprice:"2790",
+     },
+
+    
+
+ ]
+
+ //   var  mensData=JSON.parse(localStorage.getItem("mensData"));
+ mensData.map(function(data){
+
+    
+   
+    var div = document.createElement("div");
+     
+    ////image creation  
+    var image=document.createElement("img");
+    image.setAttribute("src",data.image_url);
+
+
+    ///name creation
+    var name=document.createElement("p");
+    name.textContent=data.name;
+
+    
+     //// price creation
+    var div2=document.createElement("div2");
+    div2.setAttribute("id","flex");
+     
+    var p1=document.createElement("p");
+    p1.textContent=data.price;
+
+    var p2=document.createElement("p");
+    p2.textContent=data.strikedoffprice;
+
+    div2.append(p1,p2);
+
+    var btn=document.createElement("button");
+    btn.textContent="Add To Cart";
+
+    btn.addEventListener("click",function(){
+        addToCart(data);
+    });
+
+
+
+   
+    div.append(image,name,div2,btn);
+
+    document.querySelector("#container").append(div);
+ });
+
+ var cartArr=JSON.parse(localStorage.getItem("cartItem"))||[]
+ // this is line very important for locat storage;
+var cartArr=[]
+
+//  ...this line is ver important statement
+
+function addToCart(data){
+    console.log(data,"data");
+    cartArr.push(data);
+    localStorage.setItem("cartItem",JSON.stringify(cartArr));
+    alert("added succesfully");
+}
+
+</script>
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+    
+
+#containerA{
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+    background-color: white;
+}
+ #flex{
+    display: flex;
+    justify-content: space-around;
+}
+</style>
+<body>
+<!-- <h1>Men Page</h1>
+<button onclick="window.location.href='cart.html'">Go to Cart</button> -->
+
+<div id="containerA"></div>
+</body>
+<!-- </html> -->
+<script>
+var mensData=[  
+{
+image_url:
+"https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+name:"REDEFINE Regime : Visibly lifts, sculpts + firms while minimizing the appearance of lines + deep wrinkles",
+price:"$220",
+//strikedoffprice:"2599",
+},
+
+{
+image_url:
+"https://www.rodanandfields.com/en-us/medias/RVWA125-RVTG125-RVSS050-RVTTG50-REVERSE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w0MTY5NHxpbWFnZS9wbmd8aW1hZ2VzL2gyNy9oZWIvMTM3NTgzODQzNDEwMjIucG5nfGI3NmIzMjI0NTc2Y2RiZjZlNTdhYjg0ZDM4ZjM0MmM2M2U5Yjg5Y2RiNTM1NTM1NGFlOWNiY2E5ZTVkYTM5NWY",
+
+name:"REDEFINE Regime: Visibly lifts, sculpts + firms while minimizing the appearance of lines + deep wrinkles",
+price:"S195",
+//strikedoffprice:"$499",
+},
+
+{
+image_url:
+"https://www.rodanandfields.com/en-us/medias/UNWA125-UNTJ125-UNTT030-UNSS030-UNBLEMISH-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w1NDk5N3xpbWFnZS9wbmd8aW1hZ2VzL2g2YS9oOTYvMTM3NTgzODQ4NjUzMTAucG5nfDNhOWMxMGU5MjIzMGEyZjNhNTZjNWVkMjUxYmJjODI5YmNlODhjODBkNzJjZTA4ZDk1YTk0Yzk0ZjkyNzdhZmU",
+name:"UNBLEMISH Regimen : Helps clear and prevent breakouts while visibly minimizing pores and fine lines",
+price:"$190",
+//strikedoffprice:"2399",
+},
+
+
+{
+image_url:
+"https://www.rodanandfields.com/en-us/medias/SOWA125-SOTT050-SOMO050-SOSS050-SOOTHE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w0MDc1MHxpbWFnZS9wbmd8aW1hZ2VzL2g5Zi9oYWMvMTM3NTgzODUxMjc0NTQucG5nfGFmOTE5ZGY1MjdhZmFkNDhhNzNiOTkyYTYzODAxNzI4OTE3ZGQ5Zjk3YzRlOGRlNTIzYzU3MzZlMTQzNGEzNTI",
+name:"SOOTHE Regimen : Protects sensitive skin, reduces visible redness + fortifies skin’s moisture barrier.",
+price:"$185",
+//strikedoffprice:"$299"
+},
+
+{
+image_url:
+"https://www.rodanandfields.com/en-us/medias/RCWA125-RCTTO50-RCSP040-REGHARGE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wyNTQ5NHxpbWFnZS9wbmd8aW1hZ2VzL2hkNi9oNDMvMTM3NTgzODQ2MDMxNjYucG5nfGQ4MzYxODU0ZDcxOTZiOTdlODg3NmZmZTAzZGQ1MGQ5Yjg0YzBhODk3NzJhYzM5NzZlNjQ1NjQzNGQ3NTY0ZmE",
+
+name:"RECHARGE Regimen : Defends against lifestyle stressors that leave skin looking dull, blotchy + dehydrated. ",
+price:"$134",
+//strikedoffprice:"199"
+},
+
+
+{
+image_url:
+"https://www.rodanandfields.com/en-us/medias/spotless-regimen-UNRS001.jpg?context=bWFzdGVyfGltYWdlc3wxOTY4NHxpbWFnZS9qcGVnfGltYWdlcy9oM2QvaGU3LzEzODE0NjU0MzA0Mjg2LmpwZ3xjNGJiOWMyMDczMDlmMzU4OWRjM2FiNjhkNjgxY2QyYzY1ZjI1NzNlY2NlNWZmMGE1NWZjNTUxMjNkOGIzY2Q3",
+name:"SPOTLESS Regimen : Clears existing blemishes + prevents new ones with BPO2 Technology.",
+price:"$89",
+//strikedoffprice:"$99"
+},
+
+{
+image_url:
+"https://www.rodanandfields.com/en-us/medias/ENHEFG1-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMjI3N3xpbWFnZS9wbmd8aW1hZ2VzL2hkMS9oM2MvMTQ1MzIxNjY2MTUwNzAucG5nfGZlMDQ0NDRlMjczNDFlZjdkYWVmNjkwZWY4MDAwM2I4MjMwZGZiMzU3ZTViZGNlYjllNzBiZjAwY2FlZDU5NzA",
+
+name:"Active Hydration Serum : Instantly boosts hydration levels by 200% and locks in moisture on skin's surface. ",
+price:"$112",
+//strikedoffprice:"$150"
+},
+
+{
+image_url:
+"https://www.rodanandfields.com/en-us/medias/ENHEY15-720x600-DESKTOP-v4.jpg?context=bWFzdGVyfGltYWdlc3w2MDYyOXxpbWFnZS9qcGVnfGltYWdlcy9oZDcvaGI2LzEzNTMzMTczODc0NzE4LmpwZ3w0MGI1MmM0OTExMmRiMzUzYzg5YTIyNWJjZTdiOTZkNzk1ZTVmOTk2MTBhY2IzZTcwNzhkZDI4NTUxZDI5Zjhh",
+name:"Active Hydration BrightEye Complex:Reduces visible dark circles,under-eye puffiness overtime younger-looking eyes",
+price:"$72",
+//strikedoffprice:"$90",
+}
+
+// {
+// image_url:
+// "https://www.rodanandfields.com/en-us/medias/ENBR001-720x600-DESKTOP.jpg?context=bWFzdGVyfHJvb3R8MTg2NDR8aW1hZ2UvanBlZ3xoNWMvaGQ5LzEzNTMzMTYzMDk0MDQ2LmpwZ3xiNmNjNjE3YmJmOTI4Y2UzZjAwM2RkMDQwZDNkNmNiZDQyZWQzMzQ4N2ZjZmMxOWY1OGEzYjQ1MTFiM2M1MGE5",
+// name:"Active Hydration Bright Eye Complex : Reduces visible dark circles and under-eye puffiness overtime younger-lookin.,
+// price:"$72",
+// strikedoffprice:"$90",
+// },
+
+// {
+// image_url:
+// "https://www.rodanandfields.com/en-us/medias/brow-defining-boost-light-ENEBS01.jpg?context=bWFzdGVyfGltYWdlc3wyMTU3OXxpbWFnZS9qcGVnfGltYWdlcy9oODgvaDYzLzEzODE0NjU1MDU3OTUwLmpwZ3xjM2M3NGZiODY4OThkOWYxYzRmYTgyYzUzNTFiNDA2NmY1NmFkMGM1YzcyNmFiZWJhMmRjNGIzMWI1NTJiZjc1",
+// name:"Black",
+// price:"500",
+// strikedoffprice:"27990",
+// },
+
+]
+
+//   var  mensData=JSON.parse(localStorage.getItem("mensData"));
+mensData.map(function(data){
+
+
+
+var div = document.createElement("div");
+
+////image creation  
+var image=document.createElement("img");
+image.setAttribute("src",data.image_url);
+
+
+///name creation
+var name=document.createElement("p");
+name.textContent=data.name;
+
+
+//// price creation
+var div2=document.createElement("div2");
+div2.setAttribute("id","flex");
+
+var p1=document.createElement("p");
+p1.textContent=data.price;
+
+var p2=document.createElement("p");
+p2.textContent=data.strikedoffprice;
+
+div2.append(p1,p2);
+
+var btn=document.createElement("button");
+btn.textContent="Add To Cart";
+
+btn.addEventListener("click",function(){
+addToCart(data);
+});
+
+
+
+
+div.append(image,name,div2,btn);
+
+document.querySelector("#container").append(div);
+});
+
+var cartArr=JSON.parse(localStorage.getItem("cartItem"))||[]
+// this is line very important for locat storage;
+var cartArr=[]
+
+//  ...this line is ver important statement
+
+function addToCart(data){
+console.log(data,"data");
+cartArr.push(data);
+localStorage.setItem("cartItem",JSON.stringify(cartArr));
+alert("added succesfully");
+}
+
+</script>
+/////////////////////////////////////
+<html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+    </head>
+    <style>
+        #bucket{
+        width: 1200px;
+        height: 400px;
+        background-color:white;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 150px;
+       }
+
+       #bucket>div{
+           width:400px;
+           height: 500px;
+           background-color:whitesmoke ;
+           margin-top: 25px;
+           margin-left: 25px;
+       }
+    </style>
+    <body>
+        <div id="bucket">
+            <div>
+                <div>
+                    <img src="https://www.rodanandfields.com/en-us/medias/Derm-Inspired-Card1.png?context=bWFzdGVyfHJvb3R8OTY4NDh8aW1hZ2UvcG5nfGg2NC9oNDUvMTQzNjc5Njg3NTU3NDIucG5nfGQ1MTk2NGM3YzFhZjVhNmI3OTAwNDMzYjQyM2ZhY2E3OTgzMTc0YTdiYWI4Mzc3YTNlY2QyYjgzNDVmZDlkNmI" alt="">
+                </div>
+                <h2>Derm Inspired</h2>
+                <p>Dr. Katie Rodan + Dr. Kathy fields founded R+F to give everyone access to life-changing skincare.</p>
+                <a.href=Meet-Our-Doctors>
+            </div>
+            <div>
+                <div>
+                    <img src="https://www.rodanandfields.com/en-us/medias/Clinically-Tested-Card2.png?context=bWFzdGVyfHJvb3R8ODkyMTR8aW1hZ2UvcG5nfGhjNC9oOTAvMTQzNjc5Njg4MjEyNzgucG5nfGMwYmUyOTdlYzA0NjRjNWZjMTMzNTdmYmFlMTU4ZmY5ZWY4YTJkNDEyZWQ1YzM0Mjk2ZTg5MGQzMWY0MGNhZjQ" alt="">
+                </div>
+                <h2>Clinically Tested</h2>
+                <p>Our innovative formulas are tested in our lab and designed to work together to deliver real results.</p>
+                <a.href=Discover Multi-Med Therapy>
+
+                </div>
+
+            <div>
+                <div>
+                    <img src="https://www.rodanandfields.com/en-us/medias/Results-Guaranteed-Card3.png?context=bWFzdGVyfHJvb3R8OTM4NzB8aW1hZ2UvcG5nfGgxYy9oZDcvMTQzNjc5Njg4ODY4MTQucG5nfGM4MTI2NzNmNmFlMWE0YTU1M2YzNmY3NDYzMTU4YTk5YWI5YWU5MWJhYzIwY2MxMmU1ZDQzNWIzYTcwM2NkM2Q" alt="">
+                </div>
+
+                <h2>Results Guaranteed</h2>
+                <p>See and feel the best skin of your life within 60 days or your money back. Even on empty bottles.</p>
+                <a.href=Our Money-Back Guarantee>
+
+
+            </div>
+        </div>
+    </body>
+///////////////////
+
+<!-- 
+<!-- <!DOCTYPE html>  -->
+
+    <html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+    </head> -->
+    <style>
+
+    #Box{
+        width: 1400px;
+        height: 400px;
+        background-color: azure;
+        display: flex;
+    }
+
+    #bug{
+        width: 1400px;
+        height: 400px;
+        background-color: whitesmoke;
+        display:flex;
+        margin-left: 150px;
+        
+    }
+
+     #bug2{
+        width: 700px;
+        height: 400px;
+        background-color: whitesmoke;
+        display:flex;
+        
+    }
+    
+    #bug2>div{
+
+
+    }
+    
+     
+
+
+    #bug>div{
+      margin-left: 10px;
+      margin-right: 50px;
+    }
+    
+
+  
+  </style>
+
+  <body>
+        <div id="box">
+
+      <div id="bug">
+          
+           <div>
+               <h1>ABOUT R+F</h1>
+               <h5>PRESS ROOM</h5>
+               <h5>COMPANY INFO</h5>
+               <h5>EXECUTIVE-TEAM</h5>
+               <h5>CAREERS</h5>
+               <h5>R+F RECYCLING PROGRAM</h5>
+               <h5>BLOG</h5>
+           </div>
+
+           <div>
+              <h1>HELP</h1>
+              <h5>SHIPPING</h5>
+              <h5>SATISFACTION GURANTEE</h5>
+              <h5>PROMOTION TERMS&CONDITIONS</h5>
+              <h5>R+F FACTS</h5>
+              <h5>KLARNA</h5>
+              <h5>SITE MAP</h5>
+
+           </div>
+
+        
+
+        <div >
+          <h1 style="margin-left: 70px;">Let's Get Social</h1>
+    </div> 
+  </div>
+
+  <hr>
+
+     <p> 2022 Rodan & Fields
+
+      Privacy Policy | Terms & Conditions | Accessibility | California Supply Chains Act | DSA Code Of Ethics | Disclaimer | Preference Cente</p>
+ 
+        </div> 
+      </body>
+
+  </html> 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+

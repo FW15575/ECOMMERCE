@@ -1,0 +1,172 @@
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        </head>
+        <style>
+
+            #container{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap:20px;
+            }
+            
+            #flex{
+                display: flex;
+                justify-content: space-around;
+            }
+    
+           
+        </style>
+        <body>
+            <h1 style="text-align: center;">Best Sellers</h1>
+            <p style="text-align:center;">Shop our fan favorites. We’ve got a full range of skincare products including cleansers, creams, serums + more. All created with dermatology-inspired formulas to address your skin concerns. Experience the transformative results + get the best skin of your life.</p>
+            <button onclick="window.location.href='cart.html'">Go to Cart</button>
+            <div id="container">
+
+            </div>
+
+
+        </body>
+</html>
+
+
+
+<script>
+    var womensData=[  
+        {
+        image_url:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+    
+    name:"REDEFINE Regimen",
+    price: 220,
+    //strikedoffprice:"$2599",
+    },
+
+    {
+        image_url:
+        "https://www.rodanandfields.com/en-us/medias/TRFS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyODM2M3xpbWFnZS9wbmd8aW1hZ2VzL2g5Yy9oNzcvMTM3NTgzODUzODk1OTgucG5nfGYyZGUwNzdmOWM3N2Q2M2FlMjM4Zjc4MjQxNWZkNmIzOTc0NjIyZWM3MDgyZTY3YzA5YjMyZjNhZWY3MGE3YzY",
+         
+       name:"Total RF Serum",
+    price: 175,
+    //strikedoffprice:"$2599",
+    },
+
+    {
+        image_url:
+        "https://www.rodanandfields.com/en-us/medias/ENHLSH01-Regimen-Explainer-R-F-Lash-Boost-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxMDc0OHxpbWFnZS9wbmd8aW1hZ2VzL2hmMS9oYWMvMTQ1MzIwNDI1ODgxOTAucG5nfDQyNTQ0OGUzYmMwZTJkM2YzNzE1MjE2NzQ1M2YxMWQ5M2E3ZWQ2MjAwMDA3MzFmNjQyOWUwNDU3OWZmMTkzZDY",
+    name:"R+F Lash Boost",
+    price: 155.00,
+    //strikedoffprice:"$2599",
+    },
+
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/ENHEY15-720x600-DESKTOP-v4.jpg?context=bWFzdGVyfGltYWdlc3w2MDYyOXxpbWFnZS9qcGVnfGltYWdlcy9oZDcvaGI2LzEzNTMzMTczODc0NzE4LmpwZ3w0MGI1MmM0OTExMmRiMzUzYzg5YTIyNWJjZTdiOTZkNzk1ZTVmOTk2MTBhY2IzZTcwNzhkZDI4NTUxZDI5Zjhh",
+    name:"Active Hydration Bright Eye Complex",
+    price: 72,
+    //strikedoffprice:"$2599"
+    },
+
+    {
+        image_url:
+        "https://www.rodanandfields.com/en-us/medias/ENHEFG1-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMjI3N3xpbWFnZS9wbmd8aW1hZ2VzL2hkMS9oM2MvMTQ1MzIxNjY2MTUwNzAucG5nfGZlMDQ0NDRlMjczNDFlZjdkYWVmNjkwZWY4MDAwM2I4MjMwZGZiMzU3ZTViZGNlYjllNzBiZjAwY2FlZDU5NzA",
+
+    name:"Active Hydration Serum",
+    price: 112,
+    //strikedoffprice:"$2599"
+    },
+
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/MFEC-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyMzc3NHxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oZmMvMTM3NTgzODU0NTUxMzQucG5nfDNmYWYyNzdiZGY5OWIyY2UzMDYyZDliYmM2YmUzMTRmOGY3Yzg0YmY1ZjY2YjgyYWU1OGNhZDZiN2IzMjViZGI",
+    name:"REDEFINE Multi-Function Eye Cream",
+    price: 70,
+   // strikedoffprice:"$2599"
+    },
+
+    {
+        image_url:
+    "https://www.rodanandfields.com/en-us/medias/ENBR001-720x600-DESKTOP.jpg?context=bWFzdGVyfHJvb3R8MTg2NDR8aW1hZ2UvanBlZ3xoNWMvaGQ5LzEzNTMzMTYzMDk0MDQ2LmpwZ3xiNmNjNjE3YmJmOTI4Y2UzZjAwM2RkMDQwZDNkNmNiZDQyZWQzMzQ4N2ZjZmMxOWY1OGEzYjQ1MTFiM2M1MGE5",
+
+    name:"Rodan + Fields Active Hydration Body Replenish",
+    price: 66,
+    //strikedoffprice:"$2599"
+    },
+
+    {
+      image_url:
+    "https://www.rodanandfields.com/en-us/medias/ENPS125-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODU1NXxpbWFnZS9wbmd8aW1hZ2VzL2gyNi9oZjgvMTQ1MzIxNjc2MzA4NzgucG5nfGM0YTc0NjM0YWIzM2QxZDZlOTc0NTdmYjA4M2EyNDA5NGJhODg3ZDQwMGJjZjdiMTZlYTI2MjYwNjI2Y2JhZGE",
+    name:"Rodan + Fields Enhancements Micro-Dermabrasion Paste",
+    price: 83,
+    //strikedoffprice:"$2599"
+    },
+ ]
+
+ //   var  mensData=JSON.parse(localStorage.getItem("mensData"));
+ womensData.map(function(data){
+     
+    var div = document.createElement("div");
+   
+
+     ////image creation  
+    var image=document.createElement("img");
+    image.setAttribute("src",data.image_url);
+
+
+    ///name creation
+    var name=document.createElement("p");
+    name.textContent=data.name;
+
+    
+     //// price creation
+    var div2=document.createElement("div2");
+    div2.setAttribute("id","flex");
+     
+    var p1=document.createElement("p");
+    p1.textContent=data.price;
+
+    var p2=document.createElement("p");
+    p2.textContent=data.strikedoffprice;
+
+    div2.append(p1,p2);
+
+    var btn=document.createElement("button");
+    btn.textContent="Add To Cart";
+
+    btn.addEventListener("click",function(){
+        addToCart(data);
+    });
+
+
+   
+    div.append(image,name,div2,btn);
+
+    document.querySelector("#container").append(div);
+ });
+
+
+
+ var cartArr=JSON.parse(localStorage.getItem("cartItem"))||[]
+ // this is line very important for locat storage;
+var cartArr=[]
+
+//  ...this line is ver important statement
+
+function addToCart(data){
+    console.log(data,"data");
+    cartArr.push(data);
+    localStorage.setItem("cartItem",JSON.stringify(cartArr));
+    alert("added succesfully");
+}
+</script>
+
+
+
+
